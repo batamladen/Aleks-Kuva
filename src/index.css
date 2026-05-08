@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Groovy';
+  src: url('https://fonts.cdnfonts.com/css/retro-groovy');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --font-body: 'Outfit', sans-serif;
+
+    --background: 34 78% 95%;
+    --foreground: 18 52% 12%;
+    --card: 34 78% 95%;
+    --card-foreground: 18 52% 12%;
+    --popover: 34 78% 95%;
+    --popover-foreground: 18 52% 12%;
+    --primary: 14 84% 51%;
+    --primary-foreground: 34 78% 95%;
+    --secondary: 46 97% 49%;
+    --secondary-foreground: 18 52% 12%;
+    --muted: 30 30% 88%;
+    --muted-foreground: 18 30% 40%;
+    --accent: 46 97% 49%;
+    --accent-foreground: 18 52% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 30% 80%;
+    --input: 30 30% 80%;
+    --ring: 14 84% 51%;
+    --chart-1: 14 84% 51%;
+    --chart-2: 46 97% 49%;
+    --chart-3: 140 30% 45%;
+    --chart-4: 30 60% 50%;
+    --chart-5: 18 52% 12%;
+    --radius: 0.75rem;
+    --sidebar-background: 34 78% 93%;
+    --sidebar-foreground: 18 52% 12%;
+    --sidebar-primary: 14 84% 51%;
+    --sidebar-primary-foreground: 34 78% 95%;
+    --sidebar-accent: 46 97% 49%;
+    --sidebar-accent-foreground: 18 52% 12%;
+    --sidebar-border: 30 30% 80%;
+    --sidebar-ring: 14 84% 51%;
+  }
+
+  .dark {
+    --background: 18 52% 8%;
+    --foreground: 34 78% 95%;
+    --card: 18 52% 10%;
+    --card-foreground: 34 78% 95%;
+    --popover: 18 52% 10%;
+    --popover-foreground: 34 78% 95%;
+    --primary: 14 84% 51%;
+    --primary-foreground: 34 78% 95%;
+    --secondary: 46 97% 49%;
+    --secondary-foreground: 18 52% 12%;
+    --muted: 18 30% 18%;
+    --muted-foreground: 30 20% 60%;
+    --accent: 46 97% 49%;
+    --accent-foreground: 18 52% 12%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 18 30% 20%;
+    --input: 18 30% 20%;
+    --ring: 14 84% 51%;
+    --chart-1: 14 84% 51%;
+    --chart-2: 46 97% 49%;
+    --chart-3: 140 30% 45%;
+    --chart-4: 30 60% 50%;
+    --chart-5: 34 78% 95%;
+    --sidebar-background: 18 52% 10%;
+    --sidebar-foreground: 34 78% 95%;
+    --sidebar-primary: 14 84% 51%;
+    --sidebar-primary-foreground: 34 78% 95%;
+    --sidebar-accent: 18 30% 18%;
+    --sidebar-accent-foreground: 34 78% 95%;
+    --sidebar-border: 18 30% 20%;
+    --sidebar-ring: 14 84% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+}
+
+/* Groovy heading font */
+.font-groovy {
+  font-family: 'Bungee Shade', 'Impact', cursive;
+  letter-spacing: 0.02em;
+}
+
+/* Film grain overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.3);
+  border-radius: 999px;
+}
