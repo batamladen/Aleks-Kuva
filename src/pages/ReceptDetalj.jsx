@@ -68,9 +68,10 @@ export default function ReceptDetalj() {
                 {/* Hand-drawn strelica + tekst — apsolutno pozicionirani levo od slike */}
                 <div className="absolute right-full bottom-0 flex flex-col items-start pr-2" style={{ whiteSpace: 'nowrap' }}>
                   {/* SVG strelica koja ide gore-desno prema slici */}
-                  <svg width="52" height="36" viewBox="0 0 52 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 30 C12 22, 28 12, 48 6" stroke="#2D1B10" strokeWidth="2.2" strokeLinecap="round" fill="none"/>
-                    <path d="M48 6 C44 9, 40 5, 43 13" stroke="#2D1B10" strokeWidth="2.2" strokeLinecap="round" fill="none"/>
+                  <svg width="64" height="48" viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 40 Q28 28 54 10" stroke="#2D1B10" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                    <path d="M54 10 L40 12" stroke="#2D1B10" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                    <path d="M54 10 L52 24" stroke="#2D1B10" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                   </svg>
                   <span style={{ fontFamily: "'Caveat', cursive", fontSize: '1.15rem', fontWeight: 700, color: '#2D1B10', lineHeight: 1.1 }}>
                     KLIKNI ME

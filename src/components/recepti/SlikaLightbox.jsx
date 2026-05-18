@@ -7,15 +7,8 @@ export function SlikaKlikabilna({ src, alt, className }) {
 
   return (
     <>
-      <div className="relative group cursor-zoom-in" onClick={() => setOtvoren(true)}>
+      <div className="cursor-zoom-in" onClick={() => setOtvoren(true)}>
         <img src={src} alt={alt} className={className} />
-        {/* Overlay sa indikatorom */}
-        <div className="absolute inset-0 bg-espresso/0 group-hover:bg-espresso/20 transition-all duration-300 rounded-inherit flex items-end justify-center pb-4">
-          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1.5 bg-espresso/70 text-cream text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-sm">
-            <ZoomIn className="w-3.5 h-3.5" />
-            Uvećaj sliku
-          </div>
-        </div>
       </div>
 
       {/* Lightbox */}
